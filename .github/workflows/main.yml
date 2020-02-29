@@ -3,8 +3,8 @@ name: Terraform deploy to Azure
 on: [push]
 
 jobs:
-	build:
-		runs-on: ubuntu-latest
+build:
+runs-on: ubuntu-latest
 		
 		steps:
 		- name: "Checkout"
