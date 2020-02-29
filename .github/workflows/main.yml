@@ -4,16 +4,16 @@ on: [push]
 
 jobs:
   build:
-runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
 
-steps:
--name: "Checkout"
-uses: actions/checkout@master
+  steps:
+  -name: "Checkout"
+  uses: actions/checkout@master
 
--name: "Terraform Init"
-with:
-tf_actions_version: 0.12.13
-tf_actions_subcommand: "init"
+  -name: "Terraform Init"
+  with:
+  tf_actions_version: 0.12.13
+  tf_actions_subcommand: "init"
 
 -name: "Terraform Plan"
 uses: hashicorp/terraform-github-actions@master
